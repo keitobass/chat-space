@@ -5,7 +5,6 @@
 |name|string|null: false|
 |mail|string|null: false|
 |password|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
 |message_id|integer|null: false, foreign_key: true|
 |groups_users_id|integer|null: false, foreign_key: true|
 
