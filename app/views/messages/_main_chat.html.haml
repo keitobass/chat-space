@@ -1,1 +1,29 @@
-メイン
+.chat-main
+  .chat-main__group-info
+    .group-info-box
+      %ul.group-info-leftbox
+        %li.group-info-leftbox__name
+          test
+        %li.group-info-leftbox__member
+          Member : masa
+      = link_to "#", class: "chat-main__group-info--edit" do
+        Edit
+
+  .chat-main__message-list
+    .message-box
+      %ul.massage-left-box
+        %li.massage-left-box__name
+          masa
+        %li.massage-left-box__message
+          おはよう
+      .massage-right-box
+        2016/1/1
+
+  .chat-main__message-form
+    %form.Form-box
+      .input-box
+        %input.input-box__inputText{"placeholder": "type a message", "type": "text"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file"}
+      %input.Form-box__submit{"name": "commit", "type": "submit", "value": "Send"}
