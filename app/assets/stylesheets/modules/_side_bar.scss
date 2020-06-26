@@ -15,13 +15,15 @@
 .group {
   margin: 0 20px;
   padding: 20px 0 40px 0;
-  color: #ffffff;
+
   &__name {
     margin-bottom: 5px;
     font-size: 15px;
+    color: #ffffff;
   }
   &__massage {
     font-size: 11px;
+    color: #ffffff;
   }
 }
 
