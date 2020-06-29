@@ -1,0 +1,11 @@
+
+.message-box
+  %ul.massage-left-box
+    %li.massage-left-box__name
+      = message.user.name
+    %li.massage-left-box__message
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .massage-right-box
+    - if message.content.present?
+      %p.massage-right-box__text
+    = message.content

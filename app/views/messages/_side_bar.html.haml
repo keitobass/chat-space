@@ -9,14 +9,14 @@
         = link_to edit_user_path(current_user), class: "top-items__icon--cog" do
           = icon('fa', 'cog',  class: "top-items__icon--coler")
 
-  .side-bar__group-lis
+  .side-bar__group-list
     - current_user.groups.each do |group|
       %ul.group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           %li.group__name 
             = group.name
-          %li.group__massage 
-            まだメッセージはありません
+          %li.group__message 
+            = group.show_last_message
 
 
 
