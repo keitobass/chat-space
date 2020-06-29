@@ -9,3 +9,4 @@
     - if message.content.present?
       %p.massage-right-box__text
     = message.content
+    = image_tag message.image.url, class: 'massage-right-box__image' if message.image.present?
