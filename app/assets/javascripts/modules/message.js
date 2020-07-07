@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="message-box">
+        `<div class="message-box" data-message-id=${message.id}>
           <ul class="massage-left-box">
             <li class="massage-left-box__name">
               ${message.user_name}
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-        `<div class="message-box">
+        `<div class="message-box" data-message-id=${message.id}>
           <ul class="massage-left-box">
             <li class="massage-left-box__name">
               ${message.user_name}
@@ -44,6 +44,7 @@ $(function(){
     e.preventDefault()
     let formData = new FormData(this);
     let url = $(this).attr('action');
+    
     $.ajax({
       url: url,
       type: "POST",
